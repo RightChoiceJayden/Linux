@@ -1,4 +1,4 @@
-# File Permissions in Linux
+# Permissions in Linux
 <h2>Description</h2>
 
 In this scenario, I modify the permissions for files and
@@ -75,5 +75,24 @@ the file.
 
 ![FP2](https://github.com/user-attachments/assets/8fbb11d7-963b-47e4-b6c8-d1e5986880ca)
 
+## Change File Permissions on a Hidden File
 
+The command chmod also allows us to change the file permissions for the hidden files. As for
+“.project_x.txt”, I remove the write permissions for the users and the group
+while maintaining read permissions for the group. The following code is able to make it happen
+in a single line of code:
+ <mark>Chmod u-w,g-w,g+r .project_x.txt</mark>
+
+![FP3](https://github.com/user-attachments/assets/76fa089d-f8d1-4c7b-ad28-5e1bf2a97c12)
+
+## Change Directory Permissions
+
+The command <mark>chmod g-x drafts</mark> will authorize only researcher2 to gain access to drafts
+directory.
+
+![FP4](https://github.com/user-attachments/assets/ab851a05-2676-4352-93a4-22e6ea7ceca7)
+
+## Summary
+
+This is a demonstration of my capability to modify user/group/file/directory permissions
 
