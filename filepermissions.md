@@ -38,13 +38,42 @@ that it is a regular file.
 
 - <b>2nd-4th characters:</b> These characters indicate the read (r), write (w), and execute (x)
 permissions for the user. When one of these characters is a hyphen (-) instead, it
-indicates that this permission is not granted to the user.
+indicates that this permission is not granted to the <b>user</b>.
 
 - <b>5th-7th characters:</b> These characters indicate the read (r), write (w), and execute (x)
 permissions for the group. When one of these characters is a hyphen (-) instead, it
-indicates that this permission is not granted for the group.
+indicates that this permission is not granted for the <b>group</b>.
 
 - <b>8th-10th characters:</b> These characters indicate the read (r), write (w), and execute (x)
 permissions for others. It includes all other users on the system that are not users and
 the group. When one of these characters is a hyphen (-) instead, that indicates that
-this permission is not granted for others.
+this permission is not granted for <b>others</b>.
+
+## Change File Permissions
+
+The command chmod allows us to change the file permissions. To do this, there are some
+important notes:
+1. The command <mark>chmod u+(r/w/x) project file name</mark> allows us to add the file
+permissions for the <b>users</b>.
+2. The command <mark>chmod u-(r/w/x) project file name</mark> allows us to remove the
+file permissions for the <b>users</b>.
+3. The command <mark>chmod g+(r/w/x) project file name</mark> allows us to add the file
+permissions for the <b>group</b>.
+4. The command <mark>chmod g-(r/w/x) project file name </mark> allows us to remove the
+file permissions for the <b>group</b>.
+5. The command <mark>chmod o+(r/w/x) project file name </mark> allows us to add the file
+permissions for <b>others</b>.
+6. The command <mark>chmod o-(r/w/x) project file name </mark> allows us to remove the
+file permissions for <b>others</b>.
+
+<ins>Changes</ins>
+
+1. <mark>chmod o-w project_k.txt</mark> to remove write permissions
+from the file.
+2. <mark>chmod g-r project_m.txt</mark> to remove read permissions from
+the file.
+
+![FP2](https://github.com/user-attachments/assets/8fbb11d7-963b-47e4-b6c8-d1e5986880ca)
+
+
+
