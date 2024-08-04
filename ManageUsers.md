@@ -38,37 +38,34 @@ left behind).
 
 <mark>sudo chown researcher9 /home/researcher2/projects/project_r.txt </mark>
 
-Notice that all the commands require <mark>sudo</mark>. <mark>Sudo</mark> means “super user do!”. 
+Notice that all the commands require <mark>sudo</mark>. <mark>sudo</mark> means “super user do!”. 
 
  <h2>Adding users and group</h2>
 
-The organization would like to add researcher9 to the system and add him to the
-research_team group as his primary group. Here’s the command:
-1. Sudo useradd researcher9
-Ketmanto Wangsa - Cybersecurity Portfolio
-2. Sudo usermod -g research_team researcher9
-Alternatively, we can perform both steps at once:
-1. Sudo useradd researcher9 -g research_team
+Add  <mark>researcher9</mark> to the system and add him to the
+ <mark>research_team</mark> group as his primary group. Here’s the command:
+
+ <mark>sudo useradd researcher9 -g research_team</mark> 
    
 <h2>Assign file ownership </h2>
 
-Researcher9 will take over project_r and the owner has to be him (project_r.txt).
-The project_r.txt is located in the /home/researcher2/projects and is currently
-owned by researcher2.
-The command to make it happen is:
-sudo chown researcher9 /home/researcher2/projects/project_r.txt
+<mark>Researcher9</mark> will take over  <mark>project_r</mark> as the owner.
+The <mark>project_r.txt</mark> is located in the /home/researcher2/projects and is currently
+owned by <mark>researcher2</mark>.
+The command is:
 
+ <mark>sudo chown researcher9 /home/researcher2/projects/project_r.txt</mark> 
+ 
 <h2>Add the user to a secondary group</h2>
 
-A few months later, researcher9 is now working in both the research and sales
-departments. My task is to add resesarcher9 to the sales department as a secondary
-group without removing him from research department. Sales team is sales_team.
-Sudo usermod -a -G sales_team researcher9
+Add  <mark>resesarcher9</mark> to the sales department as a secondary
+group without removing him from research department. Sales team is  <mark>sales_team</mark> 
+
+ <mark>sudo usermod -a -G sales_team researcher9</mark>
 
 <h2>Delete a user</h2>
 
-A year later, researcher9 decided to leave the company. In this task, I have to remove him from
+A year later, <mark>researcher9</mark> decided to leave the company. In this task, I remove him from
 the system. The command to make it happen is:
-1. sudo userdel researcher9 (Will not remove it. Please refer to “describe the
-command” section)
-2. sudo groupdel researcher9
+
+ <mark>sudo groupdel researcher9</mark>
